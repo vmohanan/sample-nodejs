@@ -1,6 +1,7 @@
 # nodejs
 This repository contains the files necessary to run a sample application in Node.js and to run CI tests on Shippable.
 
+[![Run Status](https://api.shippable.com/projects/578e9abc3be4f4faa56d3e95/badge?branch=master)](https://app.shippable.com/projects/578e9abc3be4f4faa56d3e95)
 
 Contents:
 This repository has 6 files and the functions of each file are as follows:
