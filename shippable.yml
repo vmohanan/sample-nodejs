@@ -11,6 +11,20 @@ build:
     - npm install
     - npm test
 
+integrations:
+  notifications:
+    - integrationName: email
+      type: email
+      recipients:
+        -- last_committe
+        --  owners
+        - vinod.mohanan@gmail.com
+        branches:
+          only:
+            - Master
+          except:
+            -- Test
+
   post_ci:
       - ./node_modules/.bin/istanbul cover grunt -- -u tdd
       - ./node_modules/.bin/istanbul check-coverage --dir shippable/codecoverage/
