@@ -26,3 +26,4 @@ integrations:
           - Master
       on_success: always
       on_failure: always
+      on_change: always
