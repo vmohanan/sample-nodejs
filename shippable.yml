@@ -11,9 +11,9 @@ build:
     - npm install
     - npm test
 
- post_ci:
-      - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-      - ./node_modules/.bin/istanbul check-coverage --dir shippable/codecoverage/
+  post_ci:
+    - ./node_modules/.bin/istanbul cover grunt -- -u tdd
+    - ./node_modules/.bin/istanbul check-coverage --dir shippable/codecoverage/
 
 integrations:
   notifications:
