@@ -11,6 +11,10 @@ build:
     - npm install
     - npm test
 
+ post_ci:
+      - ./node_modules/.bin/istanbul cover grunt -- -u tdd
+      - ./node_modules/.bin/istanbul check-coverage --dir shippable/codecoverage/
+
 integrations:
   notifications:
     - integrationName: email
@@ -23,6 +27,3 @@ integrations:
           on_success: change
           on_failure: always
 
-  post_ci:
-      - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-      - ./node_modules/.bin/istanbul check-coverage --dir shippable/codecoverage/
