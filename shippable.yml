@@ -10,3 +10,7 @@ build:
   ci:
     - npm install
     - npm test
+
+  post_ci:
+      - ./node_modules/.bin/istanbul cover grunt -- -u tdd
+      - ./node_modules/.bin/istanbul cobertura --dir shippable/codecoverage/
