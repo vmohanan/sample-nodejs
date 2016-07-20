@@ -21,9 +21,8 @@ integrations:
       type: email
       recipients:
         - vinod.mohanan@gmail.com
-          branches:
-            only:
-              - Master
-          on_success: change
-          on_failure: always
-
+      branches:
+        only:
+          - Master
+      on_success: always
+      on_failure: always
