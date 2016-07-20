@@ -16,14 +16,12 @@ integrations:
     - integrationName: email
       type: email
       recipients:
-        -- last_committe
-        --  owners
         - vinod.mohanan@gmail.com
-        branches:
-          only:
-            - Master
-          except:
-            -- Test
+          branches:
+            only:
+              - Master
+          on_success: change
+          on_failure: always
 
   post_ci:
       - ./node_modules/.bin/istanbul cover grunt -- -u tdd
